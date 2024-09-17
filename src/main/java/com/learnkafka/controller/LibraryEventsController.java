@@ -39,7 +39,7 @@ public class LibraryEventsController {
 
     @PutMapping("/v1/libraryevent")
     public ResponseEntity<?> updateLibraryEvent(@RequestBody @Valid LibraryEvent libraryEvent) throws JsonProcessingException, ExecutionException, InterruptedException, TimeoutException {
-        log.info("libraryEvent: {}", libraryEvent);
+        log.info("the libraryEvent: {}", libraryEvent);
 
         ResponseEntity<String> BAD_REQUEST = validateLibraryEvent(libraryEvent);
         if (BAD_REQUEST != null) return BAD_REQUEST;
